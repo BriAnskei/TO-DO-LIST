@@ -1,0 +1,316 @@
+body {
+   background: #f0f2f5;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addListContainer,
+.showListCOntainer{
+    width: 50%;
+    height: auto;
+    
+}
+.container {
+    width: auto; 
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(238, 238, 229, 0.932);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+/*Add List*/
+.addListContainer .container  {
+  margin-top: 80px;
+  width: 500px;
+  height: auto;
+ 
+}
+.container .Addtittle {
+  
+    text-align: center;
+    padding: 15px;
+    
+}
+
+
+.addInputs {
+    margin:  0;
+    padding: 30px;
+}
+
+.addInputs input {
+    height: 38px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+#time, #listID {
+    margin-left: 15px;
+}
+
+/*priority level, Add List*/
+.priority-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+#Ptext {
+    margin-right: 10px; /* Add some spacing between text and select */
+
+}
+
+#Plevel {
+    height: 40px;
+    border: none;
+    overflow: hidden;
+    background-color: inherit;
+ 
+   
+}
+
+#Plevel::-moz-focus-inner {
+    border: 0;
+}
+
+#Plevel:focus {
+    outline: none;
+}
+
+#Plevel option {
+    color: gray;
+    width: 60px;
+    font-size: inherit;
+    padding: 10px 0;
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border: rgb(204, 204, 0) solid 1px;
+    border-radius: 5px;
+   
+}
+
+
+#submitBUtton, #clearButton {
+    background-color: darkgrey;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0 16px;
+  width: 150px;
+  margin-top: 15px;
+}
+#clearButton {
+    margin-left: 125px;
+  
+}
+
+
+
+
+
+
+
+
+
+/*List*/
+.index {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: auto;
+}
+#currentTime{
+  margin: 5px;
+ border: none;
+  margin-left: 25px;
+  border-radius: 6px;
+  background: inherit;
+}
+#historyB{
+   background-color: inherit;
+   border: none;
+  
+  margin-left: 380px;
+ }
+
+ #icon {
+   height: 20px;
+   width: 20px;
+   background-size: cover;
+ }
+ 
+ 
+.showListCOntainer .container  {
+    padding-bottom: 30px;  
+    margin-top: 15px;
+    margin-right: 100%;
+    width: 600px;
+    height: 565px;
+  }
+
+  .scroll-panel {
+    width: 500px; /* Adjust width as needed */
+    height: 350px; /* Adjust height as needed */
+    border: 2px solid gray; /* Optional: Add border for visual clarity */
+    margin: auto;
+    margin-top: 50px;
+  }
+  .tableList {
+    border-radius: 5px;
+    background-color: white;
+    width: 80%;
+    margin-left: 58px;
+    height: 70%;
+    padding: 3px;
+    overflow: auto;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
+  }
+  .tableList td {
+   
+    border: 1px solid black;
+    width: 600px;
+    height: 30px;
+    padding: 8px;
+  }
+  
+  
+  th{
+    border: 1px solid black;
+    padding: 6px;
+    margin-bottom: 100px; 
+  }
+  
+
+  
+.selected {
+ border: 3px solid black;
+ font-size: 20px;
+}
+
+ 
+
+  table {
+    text-align: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    overflow-y: scroll;
+    width: 100%;
+  }
+ th td {
+  font-size: 15px;
+ }
+  
+  
+ 
+
+  
+
+
+
+
+
+
+  
+/*buttons in showList*/
+  #doneButton, #deleteButton {
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 16px;
+    width: 150px;
+    margin-top: 15px;
+    margin-left: 94px;
+  }
+  #doneButton{
+    background-color: rgba(0, 128, 0, 0.767);
+    color: white;
+  }
+  #deleteButton{
+    color: white;
+    background-color: red;
+  }
+
+  
+
+
+ /* window history design */
+ 
+ .block {
+  margin: auto;
+  border-radius: 8px;
+  width: 600px;
+  height: 590px;
+  background-color: rgba(238, 238, 229, 0.932);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+ }
+ .block .tableList{
+  margin: auto;
+  border-radius: 18px
+ }
+ .header {
+  margin: auto;
+  text-align: center;
+  border-radius: 30px;
+  padding: 6px;
+  margin-bottom: 3px;
+  width: auto;
+
+ }
+ 
+ .table button {
+  margin-top: 10px;
+ }
+ #home, #deleteAll {
+    border: none;
+    line-height: 40px;
+    padding: 0 16px;
+  
+ }
+
+.nav {
+  display: flex;
+  height: auto;
+  width: 80%;
+  margin: auto;
+
+}
+ 
+ #home {
+  margin-left: 6px;
+  background: inherit;
+ 
+  width: 50px;
+ }
+ #deleteAll {
+  background: inherit;
+  margin-left: 368px;
+ 
+  width: 50px;
+ }
+#homeimg {
+  
+  width: 30px;
+  height: 30px;
+  
+ }
+#Delete-all {
+  width: 30px;
+  height: 30px;
+}
+ 
+
+
+
+
+ /* history text(if the data is empty) table design */
+ .empty-message {
+  margin-top: 180px;
+ }

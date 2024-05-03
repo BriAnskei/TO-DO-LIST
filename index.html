@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexStyle.css">
+    <title>TO-DO LIST</title>
+</head>
+<body onload="homePageLoaded()">
+    <div class="mainContainer">
+        <div class="addListContainer">
+            <div class="container">
+               <div class="Addtittle"><h3>ADD TO-DO LIST</h3></div>
+               <div class="addInputs"><form id="myForm">
+              <p>TITTLE: <input type="text" id="listID" placeholder="Enter Title"></p>
+                <p>TIME:   <input type="time" name="time" placeholder="12:00pm" id="time"></p>
+            </form>
+                <div class="priority-container">
+                    <span id="Ptext">PRIORITY LEVEL:</span>
+                    <select name="Plevel" id="Plevel" multiple>
+                       
+                        <option value="LOW">LOW</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                        <option value="HIGH">HIGH</option>
+                    </select>
+                </div>
+                
+                <button onclick="getContent()" id="submitBUtton">ADD</button>
+                <button onclick="clearContent()" id="clearButton">CLEAR</button>
+               
+               </div>
+            </div>
+        </div>
+
+
+
+        <div class="showListCOntainer">
+            <div class="container">
+                <div class="Addtittle"><h3>TO-DO LIST</h3></div>
+                <div class="index">
+                    <input type="time" name="currentTime" id="currentTime" readonly>
+                <button id="historyB" onclick="contentHistory()" title="Done list history"><img src="img/616026-200.png" id="icon"></button>
+            </div>
+                <div class="tableList">
+                    <table id="myTable">
+                        <thead>
+                        <th>TITTLE</th>
+                        <th>TIME</th>
+                        <th>PRIORITY LEVEL</th>
+                           
+                        <tbody class="contenL">
+                           <!-- Table rows will be added dynamically here -->
+                        </tbody>
+                   
+                    </table>
+                    
+                 
+                </div>
+                <button onclick="contentDone()" id="doneButton">DONE</button>
+                <button onclick="contentDelete()" id="deleteButton">DELETE</button>
+               
+        </div>
+    </div>
+    
+    <script src="indjs.js"></script>
+</body>
+</html>

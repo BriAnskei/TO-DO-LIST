@@ -1,0 +1,16 @@
+.input-container {
+    display: flex; /* Arrange input and button horizontally */
+    margin-bottom: 10px; /* Optional spacing */
+  }
+  
+  #display-panel {
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional border for styling */
+    cursor: default; /* Default cursor for non-editable text */
+  }
+  
+  #display-panel.editable {
+    border: 2px solid blue; /* Highlight editable state */
+    cursor: text; /* Change cursor to indicate editability */
+  }
+  

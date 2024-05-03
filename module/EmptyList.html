@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Manager</title>
+  <style>
+    table {
+      border: 1px solid #ddd;
+      border-collapse: collapse;
+      width: 100%; /* Adjust width as needed */
+      margin: 10px auto;
+    }
+    th, td {
+      text-align: left;
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+    .empty-message {
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your List</h1>
+  <table id="userList">
+    </table>
+
+  <form id="addItemForm">
+    <label for="newItem">Add new item:</label>
+    <input type="text" id="newItem" name="newItem" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <script>
+    const userList = document.getElementById('userList');
+    const addItemForm = document.getElementById('addItemForm');
+    const newItemInput = document.getElementById('newItem');
+
+    let items = []; // Array to store list items
+
+    // Function to update the displayed list
+    function updateList() {
+      userList.innerHTML = ''; // Clear existing table content
+
+      if (items.length === 0) {
+        // Empty list message
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'empty-message';
+        emptyMessage.textContent = 'Your list is currently empty.';
+        userList.appendChild(emptyMessage);
+      } else {
+        // Create table header row
+        const headerRow = document.createElement('tr');
+        const headerCell = document.createElement('th');
+        headerCell.textContent = 'Items';
+        headerRow.appendChild(headerCell);
+        userList.appendChild(headerRow);
+
+        // Create table rows for each item
+        for (const item of items) {
+          const row = document.createElement('tr');
+          const cell = document.createElement('td');
+          cell.textContent = item;
+          row.appendChild(cell);
+          userList.appendChild(row);
+        }
+      }
+    }
+
+    // Function to handle form submission
+    addItemForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+
+      const newItem = newItemInput.value.trim();
+      if (newItem) { // Validate if input is not empty
+        items.push(newItem);
+        newItemInput.value = ''; // Clear input field
+        updateList();
+      } else {
+        alert('Please enter an item name.');
+      }
+    });
+
+    // Check if there are any items saved in local storage (optional persistence)
+    if (localStorage.getItem('savedItems')) {
+      items = JSON.parse(localStorage.getItem('savedItems'));
+    }
+    updateList();
+  </script>
+</body>
+</html>
